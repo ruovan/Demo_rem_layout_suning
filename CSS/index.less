@@ -1,0 +1,477 @@
+@import "common";
+
+body {
+    min-width: 320px;
+    // 因为划分了15份
+    width: 15rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+    background: #F2F2F2;
+}
+
+// 为了让cssrem生效，需要设置一下cssroot大小为50
+
+// header部分
+header {
+    height: 3.6rem;
+    background-color: #ffdb47;
+
+    // 标题部分
+    .title {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15rem;
+        height: 1.76rem;
+        background-color: #ffdb47;
+
+        .main_title {
+            width: 13.64rem;
+            margin: 0.3rem auto 0;
+            display: flex;
+            align-items: center;
+
+            a {
+                width: 0.72rem;
+                height: 1.2rem;
+            }
+
+            .classify {
+                background: url(../images/classify.png) no-repeat 0px 0px;
+                background-size: 100% auto;
+            }
+
+            .login {
+                background: url(../images/login.png) no-repeat 0px 0px;
+                background-size: 100% auto;
+            }
+
+            .logo {
+                flex: 1;
+                width: 10rem;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 9rem;
+                    align-self: center;
+                }
+            }
+        }
+
+    }
+
+    // 搜索栏部分
+    .search {
+        width: 13.64rem;
+        height: 1.84rem;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        padding-top: 1.76rem;
+
+        .search_btn {
+            flex: 1;
+            height: 1.28rem;
+            background-color: #fff;
+            border-radius: 0.6rem;
+            display: flex;
+            align-items: center;
+
+            .search_icon {
+                width: 0.72rem;
+                height: 0.72rem;
+                margin: 0 0.2rem;
+                background: url(../images/search.png) no-repeat 0px 0px;
+                background-size: 100% auto;
+            }
+
+            .search_text {
+                color: #8b7575;
+                font-size: 0.56rem;
+            }
+        }
+    }
+}
+
+// banner部分
+.banner {
+    height: 5.2rem;
+    background: url(../images/bottom.png) no-repeat 0rem 0rem;
+    background-size: 100% auto;
+
+    .banner_img {
+        width: 14.04rem;
+        height: 5.2rem;
+        margin: 0 auto;
+        border-radius: 0.48rem;
+        // 此处写left bottom是因为原网页即这样，上半部分需要隐藏住
+        background: url(../images/banner.jpg) no-repeat left bottom;
+        background-size: 100% auto;
+    }
+}
+
+//大间距
+.big_blank {
+    width: 100%;
+    height: 0.48rem;
+}
+
+// 活动部分
+.activity {
+    width: 100%;
+    height: 5.6rem;
+    display: flex;
+
+    a {
+        flex: 1;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+//导航部分
+nav {
+    width: 100%;
+    height: 6.4rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+        width: 20%;
+        height: 2.84rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.44rem;
+
+        span:first-child {
+            width: 1.68rem;
+            height: 1.68rem;
+            background: url(../images/sprite_1.png) no-repeat 0px 0px;
+            background-size: 100% auto;
+        }
+
+        &:nth-child(1) {
+            span:first-child {
+                background-position: 0rem 0rem;
+            }
+
+        }
+
+        &:nth-child(2) {
+            span:first-child {
+                background-position: 0rem -1.7rem;
+            }
+        }
+
+        &:nth-child(3) {
+            span:first-child {
+                background-position: 0rem -3.4rem;
+            }
+        }
+
+        &:nth-child(4) {
+            span:first-child {
+                background-position: 0rem -5.1rem;
+            }
+
+        }
+
+        &:nth-child(5) {
+            span:first-child {
+                background-position: 0rem -6.8rem;
+            }
+        }
+
+        &:nth-child(6) {
+            span:first-child {
+                background-position: 0rem -8.5rem;
+            }
+        }
+
+        &:nth-child(7) {
+            span:first-child {
+                background-position: 0rem -10.2rem;
+            }
+
+        }
+
+        &:nth-child(8) {
+            span:first-child {
+                background-position: 0rem -11.9rem;
+            }
+        }
+
+        &:nth-child(9) {
+            span:first-child {
+                background-position: 0rem -13.6rem;
+            }
+        }
+
+        &:nth-child(10) {
+            span:first-child {
+                background-position: 0rem -15.3rem;
+            }
+        }
+    }
+
+}
+
+//红包部分
+.money {
+    width: 100%;
+    height: 4.68rem;
+    display: flex;
+    // 平均分配排列，留出中间空隙
+    justify-content: space-between;
+
+    .money_left {
+        // flex: 2;
+        width: 50%;
+    }
+
+    .money_middle {
+        // flex: 1;
+        // 为了留出间距
+        width: 24.8%;
+    }
+
+    .money_right {
+        // flex: 1;
+        // 留出间距
+        width: 24.8%;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+// 秒杀部分
+.seckill {
+    width: 14.04rem;
+    height: 5.16rem;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.2rem 0.2rem 0 0;
+    display: flex;
+
+    div[class^="content"] {
+        width: 50%;
+        border-right: 1px solid #666;
+    }
+
+    .s_title {
+        height: 1.16rem;
+        line-height: 1.16rem;
+        font-size: 0.56rem;
+        margin: 0.36rem 0.16rem 0 0.48rem;
+    }
+
+    .s_subtitle {
+        height: 0.6rem;
+        line-height: 0.6rem;
+        color: #999;
+        font-weight: bolder;
+        font-size: 0.48rem;
+        margin: 0.08rem 0 0 0.48rem;
+    }
+
+    .s_img {
+        height: 2.4rem;
+        margin: .1rem 0 0 0;
+        display: flex;
+
+        a {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            span:first-child {
+                width: 2.4rem;
+                height: 2.4rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            span:last-child {
+                font-size: 0.4rem;
+            }
+        }
+    }
+
+}
+
+// 猜你喜欢部分
+.fav {
+    width: 15rem;
+
+    .fav_title {
+        img {
+            width: 100%;
+            // height: 100%;
+        }
+    }
+
+    .pro_list {
+        width: 14.04rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .box1,
+        .box2 {
+            width: 6.84rem;
+
+            li {
+                height: 10.84rem;
+                background-color: #fff;
+                border-radius: 0.24rem;
+                overflow: hidden;
+                margin-bottom: 0.36rem;
+
+                .pro_img {
+                    width: 6.84rem;
+                    height: 6.84rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .pro_info {
+                    width: 6.36rem;
+                    height: 1.4rem;
+                    font-size: 0.52rem;
+                    font-weight: bold;
+                    margin: 0.36rem auto 0;
+                    // padding: 0.2rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+
+                .pro_tag {
+                    display: flex;
+                    width: 5.38rem;
+                    margin: .22rem .24rem .48rem;
+                    height: .48rem;
+                    overflow: hidden;
+                    flex-wrap: wrap;
+
+                    span {
+                        margin: 0 .06rem .04rem .04rem;
+                        border-radius: .12rem;
+                        height: .48rem;
+                        padding: .04rem .24rem;
+                        line-height: .4rem;
+                        font-size: .36rem;
+                        box-sizing: border-box;
+                        border: 1px solid #FFBB00;
+                        background: #FEFBEE;
+                    }
+                }
+
+                .pro_price {
+                    height: 0.76rem;
+                    line-height: 0.76rem;
+                    font-size: 0.48rem;
+                    margin-left: 0.24rem;
+
+                    .red {
+                        color: #f00;
+                        font-size: 0.72rem;
+                    }
+
+                    .light {
+                        color: #999;
+                        font-size: 0.4rem;
+                        margin-left: 0.26rem;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+
+}
+
+// 登录注册栏
+.to_login {
+    position: fixed;
+    width: 15rem;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1.8rem;
+
+    img {
+        width: 100%;
+    }
+}
+
+// 底部tab固定部分
+.tab {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    height: 2rem;
+    display: flex;
+    background-color: #fff;
+
+    a {
+        width: 20%;
+        height: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .tab_icon {
+            width: 0.96rem;
+            height: 0.96rem;
+            background: url(../images/sprite_2.png) no-repeat;
+            background-size: 100% auto;
+        }
+
+        span:last-child {
+            font-size: 0.4rem;
+        }
+
+    }
+
+    a:nth-child(1) .tab_icon {
+        background-position: 0 0;
+    }
+
+    a:nth-child(2) .tab_icon {
+        background-position: 0 -1rem;
+    }
+
+    a:nth-child(3) .tab_icon {
+        background-position: 0 -1.9rem;
+    }
+
+    a:nth-child(4) .tab_icon {
+        background-position: 0 -2.9rem;
+    }
+
+    a:nth-child(5) .tab_icon {
+        background-position: 0 -3.8rem;
+    }
+}
